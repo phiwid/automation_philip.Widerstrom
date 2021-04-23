@@ -14,7 +14,7 @@ import * as reservationFuncs from '../pages/ReservationsPage'
 
 
 // Test Suite 
-describe('Test suite - ', function(){
+describe('Test suite - Visual regression', function(){
 
     // Start each test by loading the base url and check the title
     beforeEach(() => {
@@ -30,7 +30,6 @@ describe('Test suite - ', function(){
         cy.percySnapshot('DashboardPage')
        
         dashboardFuncs.NavigateToRooms(cy)
-        //cy.percySnapshot('RoomPage') // Tar bort denna då övriga tester påverkar för mycket
         roomFuncs.NavigateToCreateNewRoom(cy)
 
         cy.percySnapshot('CreateNewRoom')
@@ -38,7 +37,6 @@ describe('Test suite - ', function(){
         roomFuncs.NavigateBack(cy)
 
         dashboardFuncs.NavigateToClients(cy)
-        //cy.percySnapshot('ClientPage') // tar bort denna då övriga tester påverkar för mycket
         clientFuncs.NavigateToCreateClient(cy)
         cy.percySnapshot('CreateNewClient')
         createClientFuncs.NavigateBack(cy)

@@ -14,7 +14,7 @@ import * as reservationFuncs from '../pages/ReservationsPage'
 
 
 // Test Suite 
-describe('Test suite - ', function(){
+describe('Regression Test suite', function(){
 
     // Start each test by loading the base url and check the title
     beforeEach(() => {
