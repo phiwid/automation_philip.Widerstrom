@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-23T06:03:56.356Z",
+    "end": "2021-04-23T06:04:06.450Z",
+    "duration": 10094,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33cd0a26-db65-48b1-81a6-17cd2c571e73",
+      "title": "",
+      "fullFile": "cypress/integration/visual-regression.spec.js",
+      "file": "cypress/integration/visual-regression.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3392e7d5-ae86-404e-9941-722b64ebf16b",
+          "title": "Test suite - ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "#1 Login & log out with existing user",
+              "fullTitle": "Test suite -  #1 Login & log out with existing user",
+              "timedOut": null,
+              "duration": 8200,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.percySnapshot('LoginPage');\nindexFuncs.loginWithValidUser(cy);\ndashboardFuncs.checkTitleAndHeader(cy);\ncy.percySnapshot('DashboardPage');\ndashboardFuncs.NavigateToRooms(cy); //cy.percySnapshot('RoomPage') // Tar bort denna då övriga tester påverkar för mycket\nroomFuncs.NavigateToCreateNewRoom(cy);\ncy.percySnapshot('CreateNewRoom');\ncreateRoomFuncs.NavigateBack(cy);\nroomFuncs.NavigateBack(cy);\ndashboardFuncs.NavigateToClients(cy); //cy.percySnapshot('ClientPage') // tar bort denna då övriga tester påverkar för mycket\nclientFuncs.NavigateToCreateClient(cy);\ncy.percySnapshot('CreateNewClient');\ncreateClientFuncs.NavigateBack(cy);\nclientFuncs.NavigateBack(cy);\ndashboardFuncs.Logout(cy);\ncy.wait(1000);\ncy.percySnapshot('LogOut');",
+              "err": {},
+              "uuid": "fb6482b4-3be3-47a1-a966-1a3f5976bf68",
+              "parentUUID": "3392e7d5-ae86-404e-9941-722b64ebf16b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb6482b4-3be3-47a1-a966-1a3f5976bf68"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8200,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
